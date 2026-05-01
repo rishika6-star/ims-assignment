@@ -44,10 +44,15 @@ A lightweight **Incident Management System backend** built using FastAPI that si
 ims_project/
 │
 ├── backend/
-│ ├── main_fastapi.py # Core backend API
+│   ├── main.py
+│   ├── models.py
+│   ├── database.py
+│   ├── schemas.py
+│   └── services.py
 │
-├── .gitignore
-└── README.md
+├── requirements.txt
+├── Dockerfile
+├── README.md
 
 ---
 
