@@ -41,3 +41,29 @@ A lightweight **Incident Management System backend** built using FastAPI that si
 ---
 
 ## 📁 Project Structure
+ims_project/
+│
+├── backend/
+│ ├── main_fastapi.py # Core backend API
+│
+├── .gitignore
+└── README.md
+
+---
+
+## 🚀 How to Run Locally
+
+### 1️⃣ Install dependencies
+```bash
+pip install fastapi uvicorn
+python -m uvicorn main_fastapi:app --reload --port 9000
+🧪 Key Behaviors
+🔁 Debouncing
+Multiple signals within 60 seconds are grouped into one incident
+Prevents alert flooding
+🚦 Rate Limiting
+Max 5 requests per 10 seconds per client
+Prevents API abuse
+MTTR Calculation
+Automatically computed when incident is closed:
+MTTR = end_time - start_time
